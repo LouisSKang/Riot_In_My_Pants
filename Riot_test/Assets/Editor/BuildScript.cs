@@ -1,16 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿// C# example
+using UnityEditor;
 
-public class NewBehaviourScript : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+class BuildScript
+{
+	static void PerformBuild ()
+	{
+		string[] scenes = { "Assets/MyScene.unity" };
+		BuildPipeline.BuildPlayer(scenes, ...);
 	}
 }
